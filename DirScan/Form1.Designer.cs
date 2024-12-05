@@ -100,6 +100,7 @@
             this.dirList.TabIndex = 0;
             this.dirList.UseCompatibleStateImageBehavior = false;
             this.dirList.View = System.Windows.Forms.View.Details;
+            this.dirList.DoubleClick += new System.EventHandler(this.dirList_DoubleClick);
             // 
             // columnHeader1
             // 

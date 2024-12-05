@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -183,6 +184,29 @@ namespace DirScan
 
             DateTime now = DateTime.Now;
             MsgBox.Items.Add(now.ToString()+"  "+msg);
+
+        }
+
+        private void dirList_DoubleClick(object sender, EventArgs e)
+        {
+            if (dirList.Items.Count == 0)
+            {
+                return;
+            }
+
+            if (dirList.SelectedItems.Count == 0) {
+
+                return;
+            
+            }
+            foreach (ListViewItem item in dirList.SelectedItems) {
+
+                Process.Start(item.SubItems[1].Text);
+            
+            }
+            
+
+
 
         }
     }

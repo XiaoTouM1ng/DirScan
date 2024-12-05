@@ -111,6 +111,11 @@ namespace DirScan
                             string htmlContent = await responseMessage.Content.ReadAsStringAsync();
                             string title = getTitle(htmlContent);
 
+                            if (tUrl == url) {
+
+                                break;
+                            }
+
                             Form1.form.Invoke(new Action(()=>{
                                 Form1.form.addDirList(tUrl, title, item);
 
