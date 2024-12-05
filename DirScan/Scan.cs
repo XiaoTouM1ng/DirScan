@@ -118,7 +118,6 @@ namespace DirScan
 
                             Form1.form.Invoke(new Action(()=>{
                                 Form1.form.addDirList(tUrl, title, item);
-
                             }));
 
                             break;
@@ -171,7 +170,7 @@ namespace DirScan
 
             }
 
-            return "";
+            return "   ";
 
         }
 

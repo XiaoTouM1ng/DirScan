@@ -175,7 +175,7 @@ namespace DirScan
 
         public void addDirList(string url,string title,string code) {
             int count = dirList.Items.Count;
-            string[] item = { count.ToString(),url,title,code };
+            string[] item = { count.ToString(),url, title, code };
             dirList.Items.Add(new ListViewItem(item));
         
         }
