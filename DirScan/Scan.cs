@@ -117,7 +117,7 @@ namespace DirScan
                             }
 
                             Form1.form.Invoke(new Action(()=>{
-                                Form1.form.addDirList(tUrl, title, item);
+                                Form1.form.addDirList(tUrl, item, title);
                             }));
 
                             break;
