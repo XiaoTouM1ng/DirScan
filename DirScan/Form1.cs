@@ -61,7 +61,7 @@ namespace DirScan
                     MessageBox.Show("请添加目录后尝试");
                     return;
                 }
-
+                dirList.Items.Clear();
                 tScan = new Scan(url, comboBox1.Text, codeBox.Text,cookieBox.Text,agentBox.Text,refBox.Text);
                 foreach (var item in listBox2.Items) {
                     tScan.addFile(dir + item.ToString().Trim());
