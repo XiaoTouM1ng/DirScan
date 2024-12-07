@@ -62,6 +62,7 @@ namespace DirScan
                     return;
                 }
                 dirList.Items.Clear();
+                MsgBox.Items.Clear();
                 tScan = new Scan(url, comboBox1.Text, codeBox.Text,cookieBox.Text,agentBox.Text,refBox.Text);
                 foreach (var item in listBox2.Items) {
                     tScan.addFile(dir + item.ToString().Trim());

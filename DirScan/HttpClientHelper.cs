@@ -36,6 +36,7 @@ namespace DirScan
 
                 //取消使用默认的Cookies
                 HttpClientHandler handler = new HttpClientHandler() { UseCookies = false };
+                handler.ServerCertificateCustomValidationCallback =(sender, cert, chain, error) => true;
                 httpClientHelper.httpClient = new HttpClient(handler);
                 return httpClientHelper;
             }
